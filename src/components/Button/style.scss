@@ -1,0 +1,32 @@
+.btn,
+.icon-btn {
+    font-family: "Raleway", sans-serif;
+    background: #6e707a;
+    color: #e7e7eb;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 11px 18px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0px 3px 7px 2px rgba(0, 0, 0, 0.2);
+}
+.btn {
+    font-size: 14px;
+    font-weight: 500;
+    padding: 11px 18px;
+}
+
+.icon-btn {
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+
+    .icon {
+        width: 23px;
+        height: 23px;
+    }
+}

@@ -1,0 +1,13 @@
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    height: 100%;
+
+    .left-panel-wrapper {
+        width: 30%;
+    }
+    .right-panel-wrapper {
+        width: 70%;
+    }
+}
