@@ -1,6 +1,7 @@
 // import React from 'react';
 
 import LeftPanelHeader from "components/LeftPanelHeader";
+import locationPinIcon from "assets/location_pin.svg";
 
 import "./style.scss";
 
@@ -9,9 +10,22 @@ export default function LeftPanel() {
         <div className="left-panel">
             <LeftPanelHeader />
             <div className="temperature-wrapper">
-                <span className="temperature-part-one">1</span>
-                <span className="temperature-part-one">5</span>
+                15
                 <span className="temperature-type">°C</span>
+            </div>
+            <p className="weather-status">Shower</p>
+            <div className="present-day-info-wrapper">
+                <span className="today">Today</span>
+                <span className="divider">.</span>
+                <span className="present-date">Fri, 5 Jun</span>
+            </div>
+            <div className="location-wrapper">
+                <img
+                    src={locationPinIcon}
+                    alt="location"
+                    className="location-icon"
+                />
+                <p className="location">Helsinki</p>
             </div>
         </div>
     );

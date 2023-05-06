@@ -5,11 +5,53 @@
     font-family: "Raleway", sans-serif;
 
     .temperature-wrapper {
-        .temperature-part-one {
-        }
-        .temperature-part-two {
-        }
+        font-size: 144px;
+        font-weight: 500;
         .temperature-type {
+            color: #a09fb1;
+            font-size: 48px;
+        }
+    }
+
+    .weather-status {
+        font-size: 36px;
+        font-weight: 600;
+        color: #a09fb1;
+        margin: 87px 0;
+    }
+
+    .present-day-info-wrapper {
+        color: #88869d;
+        font-size: 18px;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .today {
+        }
+        .divider {
+            margin: 0 16px;
+            line-height: 0;
+        }
+        .present-date {
+        }
+    }
+
+    .location-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 32px;
+
+        .location-icon {
+            width: 22px;
+            margin-right: 8px;
+        }
+        .location {
+            color: #88869d;
+            font-size: 18px;
+            font-weight: 600;
         }
     }
 }
