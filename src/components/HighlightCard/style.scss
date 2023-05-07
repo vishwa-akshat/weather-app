@@ -1,0 +1,26 @@
+.highlight-card {
+    padding: 23px;
+    background: #1e213a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+    .heading {
+        font-size: 16px;
+        font-weight: 500;
+        color: #e7e7eb;
+    }
+
+    .main-text {
+        font-size: 64px;
+        font-weight: 700;
+        color: #e7e7eb;
+
+        .small-text {
+            margin-left: 8px;
+            font-weight: 500;
+            font-size: 36px;
+        }
+    }
+}

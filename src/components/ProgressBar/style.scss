@@ -1,0 +1,34 @@
+.progress-bar-wrapper {
+    width: 80%;
+    .percentage-wrapper {
+        display: flex;
+        justify-content: space-between;
+
+        .percent {
+            font-size: 14px;
+            font-weight: 700;
+            color: #a09fb1;
+        }
+    }
+
+    .progress-bar-outer {
+        height: 8px;
+        border-radius: 8px;
+        background: #e7e7eb;
+        margin: 5px 0;
+        .progress-bar-inner {
+            height: 8px;
+            border-radius: 8px;
+            background: #ffec65;
+            color: #ffec65;
+            overflow: hidden;
+        }
+    }
+
+    .percentage {
+        font-size: 14px;
+        font-weight: 700;
+        color: #a09fb1;
+        text-align: right;
+    }
+}
