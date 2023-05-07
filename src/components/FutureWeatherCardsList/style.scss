@@ -1,0 +1,6 @@
+.future-weather-card-list {
+    margin: 65px 0;
+    display: grid;
+    gap: 26px;
+    grid-template-columns: repeat(5, 1fr);
+}

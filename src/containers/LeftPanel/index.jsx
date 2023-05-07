@@ -1,6 +1,8 @@
 // import React from 'react';
 
 import LeftPanelHeader from "components/LeftPanelHeader";
+import WeatherConditionImg from "components/WeatherConditionImg";
+
 import locationPinIcon from "assets/location_pin.svg";
 
 import "./style.scss";
@@ -9,6 +11,7 @@ export default function LeftPanel() {
     return (
         <div className="left-panel">
             <LeftPanelHeader />
+            <WeatherConditionImg />
             <div className="temperature-wrapper">
                 15
                 <span className="temperature-type">°C</span>

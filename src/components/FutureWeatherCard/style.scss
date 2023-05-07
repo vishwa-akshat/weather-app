@@ -1,0 +1,32 @@
+.weather-card {
+    min-width: 120px;
+    background: #1e213a;
+    text-align: center;
+    color: #e7e7eb;
+    padding: 18px;
+    .day-info {
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    .weather-img {
+        width: 65px;
+        margin: 10px 0 30px;
+    }
+
+    .temperature-wrapper {
+        font-size: 16px;
+        font-weight: 500;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .max-temp {
+            color: #e7e7eb;
+        }
+
+        .min-temp {
+            color: #a09fb1;
+        }
+    }
+}
