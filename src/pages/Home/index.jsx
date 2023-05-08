@@ -20,6 +20,8 @@ export default function Home() {
     //     apiCall();
     // }, []);
 
+    //https://api.openweathermap.org/geo/1.0/direct?q=ero,&limit=5&appid=b6ad0562c691c0e527910bd7c8e9508b
+
     return (
         <div className="container">
             <div className="left-panel-wrapper">

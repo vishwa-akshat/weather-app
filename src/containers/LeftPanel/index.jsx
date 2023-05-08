@@ -2,6 +2,7 @@
 
 import LeftPanelHeader from "components/LeftPanelHeader";
 import WeatherConditionImg from "components/WeatherConditionImg";
+import LocationSearchPanel from "components/LocationSearchPanel";
 
 import locationPinIcon from "assets/location_pin.svg";
 
@@ -30,6 +31,7 @@ export default function LeftPanel() {
                 />
                 <p className="location">Helsinki</p>
             </div>
+            <LocationSearchPanel />
         </div>
     );
 }

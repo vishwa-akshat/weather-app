@@ -1,4 +1,5 @@
 .weather-condition-wrapper {
+    overflow: hidden;
     position: relative;
 
     .cloud-background {
@@ -33,8 +34,6 @@
     .weather-condition-wrapper {
         .cloud-background {
             display: block;
-            width: 120%;
-            height: 120%;
         }
 
         .weather-condition-img {
