@@ -1,6 +1,18 @@
 .left-panel-header {
-    padding: 42px 46px;
+    padding: 10%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+@media only screen and (max-width: 821px) {
+    .left-panel-header {
+        padding: 5%;
+    }
+}
+
+@media only screen and (max-width: 540px) {
+    .left-panel-header {
+        padding: 3.5%;
+    }
 }

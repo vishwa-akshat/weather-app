@@ -1,17 +1,45 @@
 .weather-condition-wrapper {
-    height: 280px;
-    overflow: hidden;
     position: relative;
 
     .cloud-background {
         position: absolute;
-        left: -60px;
-        width: 130%;
+        left: -15%;
+        width: 120%;
+        height: 100%;
+        object-fit: cover;
         filter: opacity(15%);
     }
 
     .weather-condition-img {
         width: 40%;
-        margin-top: 60px;
+        margin-top: 20%;
+    }
+}
+
+@media only screen and (max-width: 821px) {
+    .weather-condition-wrapper {
+        .cloud-background {
+            display: none;
+        }
+
+        .weather-condition-img {
+            width: 35%;
+            margin-top: 5%;
+        }
+    }
+}
+
+@media only screen and (max-width: 540px) {
+    .weather-condition-wrapper {
+        .cloud-background {
+            display: block;
+            width: 120%;
+            height: 120%;
+        }
+
+        .weather-condition-img {
+            width: 40%;
+            margin-top: 20%;
+        }
     }
 }

@@ -11,7 +11,7 @@ export default function RightPanel() {
         <div className="right-panel">
             <RightPanelHeader />
             <FutureWeatherCardsList />
-            <p className="highlight-heading">Today&apos;s Highlights</p>
+            <div className="highlight-heading">Today&apos;s Highlights</div>
             <HighlightsCardsList />
         </div>
     );

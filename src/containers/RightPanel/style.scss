@@ -1,11 +1,17 @@
 .right-panel {
-    height: 100%;
-    padding: 40px 120px 150px 120px;
+    padding: 5% 10% 7% 10%;
 
     .highlight-heading {
         font-size: 24px;
         font-weight: 700;
         color: #e7e7eb;
         margin-bottom: 32px;
+    }
+}
+
+@media only screen and (max-width: 540px) {
+    .right-panel {
+        height: 100%;
+        padding: 10% 5%;
     }
 }

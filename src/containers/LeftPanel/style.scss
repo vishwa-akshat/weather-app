@@ -3,8 +3,10 @@
     background-color: #1e213a;
     text-align: center;
     font-family: "Raleway", sans-serif;
+    padding-bottom: 10%;
 
     .temperature-wrapper {
+        margin-top: 8%;
         font-size: 144px;
         font-weight: 500;
         .temperature-type {
@@ -17,7 +19,7 @@
         font-size: 36px;
         font-weight: 600;
         color: #a09fb1;
-        margin: 87px 0;
+        margin: 24% 0;
     }
 
     .present-day-info-wrapper {
@@ -52,6 +54,34 @@
             color: #88869d;
             font-size: 18px;
             font-weight: 600;
+        }
+    }
+}
+
+@media only screen and (max-width: 821px) {
+    .left-panel {
+        padding-bottom: 10%;
+
+        .temperature-wrapper {
+            margin-top: 8%;
+        }
+
+        .weather-status {
+            margin: 15% 0;
+        }
+    }
+}
+
+@media only screen and (max-width: 540px) {
+    .left-panel {
+        padding-bottom: 25%;
+
+        .temperature-wrapper {
+            margin-top: 12%;
+        }
+
+        .weather-status {
+            margin: 8% 0 15%;
         }
     }
 }

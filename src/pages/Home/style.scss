@@ -2,12 +2,24 @@
     max-width: 1440px;
     margin: 0 auto;
     display: flex;
-    height: 100%;
 
     .left-panel-wrapper {
         width: 30%;
     }
     .right-panel-wrapper {
         width: 70%;
+    }
+}
+
+@media only screen and (max-width: 821px) {
+    .container {
+        flex-direction: column;
+
+        .left-panel-wrapper {
+            width: 100%;
+        }
+        .right-panel-wrapper {
+            width: 100%;
+        }
     }
 }
