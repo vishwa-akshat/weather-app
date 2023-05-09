@@ -5,10 +5,14 @@
     right: 0;
     bottom: 0;
     background: #1e213a;
-    padding: 20px 40px;
+    padding: 0;
+    width: 0%;
+    transition: all 0.2s linear;
+    overflow: hidden;
 
     .close-icon-wrapper {
         text-align: right;
+        cursor: pointer;
         .close-icon {
             width: 30px;
             height: 30px;
@@ -55,4 +59,10 @@
             cursor: pointer;
         }
     }
+}
+
+.location-search-panel-open {
+    padding: 20px 40px;
+    width: 100%;
+    transition: all 0.2s linear;
 }
