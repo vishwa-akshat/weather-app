@@ -1,10 +1,10 @@
-// import React from 'react';
-
-import PropTypes from "prop-types";
+import useGlobalStore from "../../store/globalStore";
 
 import "./style.scss";
 
-export default function ProgressBar({ progress = 80 }) {
+export default function ProgressBar() {
+    const weatherData = useGlobalStore((state) => state.weatherData[0]);
+
     return (
         <div className="progress-bar-wrapper">
             <div className="percentage-wrapper">
@@ -15,7 +15,7 @@ export default function ProgressBar({ progress = 80 }) {
             <div className="progress-bar-outer">
                 <div
                     className="progress-bar-inner"
-                    style={{ width: progress + "%" }}
+                    style={{ width: weatherData?.main?.humidity + "%" }}
                 >
                     0
                 </div>
@@ -24,7 +24,3 @@ export default function ProgressBar({ progress = 80 }) {
         </div>
     );
 }
-
-ProgressBar.propTypes = {
-    progress: PropTypes.number,
-};

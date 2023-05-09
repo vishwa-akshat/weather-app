@@ -11,9 +11,16 @@ export default function LeftPanelHeader() {
     const setIsLocationPanelOpen = useGlobalStore(
         (state) => state.setIsLocationPanelOpen
     );
+    const setCurrentLocation = useGlobalStore(
+        (state) => state.setCurrentLocation
+    );
 
     const handleOpenLocationPanel = () => {
         setIsLocationPanelOpen(true);
+    };
+
+    const handleSetCurrentLocation = () => {
+        setCurrentLocation();
     };
 
     return (
@@ -22,7 +29,11 @@ export default function LeftPanelHeader() {
                 onClick={handleOpenLocationPanel}
                 label="Search for places"
             />
-            <Button iconBtn icon={locationIcon} />
+            <Button
+                onClick={handleSetCurrentLocation}
+                iconBtn
+                icon={locationIcon}
+            />
         </div>
     );
 }

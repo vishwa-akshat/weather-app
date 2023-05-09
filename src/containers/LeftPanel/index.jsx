@@ -4,24 +4,35 @@ import LeftPanelHeader from "components/LeftPanelHeader";
 import WeatherConditionImg from "components/WeatherConditionImg";
 import LocationSearchPanel from "components/LocationSearchPanel";
 
+import useGlobalStore from "../../store/globalStore";
+import { formattedDate } from "../../utils/dateConverter";
+
 import locationPinIcon from "assets/location_pin.svg";
 
 import "./style.scss";
 
 export default function LeftPanel() {
+    const weatherData = useGlobalStore((state) => state.weatherData[0]);
+    const currentCity = useGlobalStore((state) => state.currentCity);
+    const unit = useGlobalStore((state) => state.unit);
+
     return (
         <div className="left-panel">
             <LeftPanelHeader />
             <WeatherConditionImg />
             <div className="temperature-wrapper">
-                15
-                <span className="temperature-type">°C</span>
+                {weatherData?.main?.temp?.toFixed(0)}
+                <span className="temperature-type">
+                    °{unit === "imperial" ? "F" : "C"}
+                </span>
             </div>
-            <p className="weather-status">Shower</p>
+            <p className="weather-status">{weatherData?.weather[0]?.main}</p>
             <div className="present-day-info-wrapper">
                 <span className="today">Today</span>
                 <span className="divider">.</span>
-                <span className="present-date">Fri, 5 Jun</span>
+                <span className="present-date">
+                    {formattedDate(weatherData?.dt_txt.split(" ")[0])}
+                </span>
             </div>
             <div className="location-wrapper">
                 <img
@@ -29,7 +40,7 @@ export default function LeftPanel() {
                     alt="location"
                     className="location-icon"
                 />
-                <p className="location">Helsinki</p>
+                <p className="location">{currentCity}</p>
             </div>
             <LocationSearchPanel />
         </div>

@@ -4,35 +4,40 @@ import HighlightCard from "components/HighlightCard";
 import WindDirection from "components/WindDirection";
 import ProgressBar from "components/ProgressBar";
 
+import useGlobalStore from "../../store/globalStore";
+
 import "./style.scss";
 
 export default function HighlightsCardsList() {
+    const weatherData = useGlobalStore((state) => state.weatherData[0]);
+    const unit = useGlobalStore((state) => state.unit);
+
     const cardsDetails = [
         {
             id: 1,
             title: "Wind status",
-            largeText: "7",
-            smallText: "mph",
+            largeText: weatherData?.wind?.speed,
+            smallText: unit === "imperial" ? "mph" : "kmph",
             extraItem: WindDirection,
         },
         {
             id: 2,
             title: "Humidity",
-            largeText: "84",
+            largeText: weatherData?.main?.humidity,
             smallText: "%",
             extraItem: ProgressBar,
         },
         {
             id: 3,
             title: "Visibility",
-            largeText: "6,4",
+            largeText: (weatherData?.visibility / 1609).toFixed(1),
             smallText: "miles",
             extraItem: null,
         },
         {
             id: 4,
             title: "Air Pressure",
-            largeText: "998",
+            largeText: weatherData?.main?.pressure,
             smallText: "mb",
             extraItem: null,
         },
