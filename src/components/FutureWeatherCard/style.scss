@@ -3,6 +3,7 @@
     text-align: center;
     color: #e7e7eb;
     padding: 13%;
+    position: relative;
     .day-info {
         font-size: 16px;
         font-weight: 500;
@@ -10,10 +11,13 @@
 
     .weather-img {
         width: 65px;
-        margin: 10px 0 30px;
+        margin: 10px 0 50px;
     }
 
     .temperature-wrapper {
+        position: absolute;
+        bottom: 20px;
+        width: 75%;
         font-size: 16px;
         font-weight: 500;
         display: flex;

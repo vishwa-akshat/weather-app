@@ -15,11 +15,13 @@ export function getWeatherImage(weather) {
             return clear;
         case "hail":
             return hail;
-        case "heavy cloud":
+        case "overcast clouds":
             return heavyCloud;
         case "heavy rain":
             return heavyRain;
-        case "light cloud":
+        case "scattered clouds":
+            return lightCloud;
+        case "broken clouds":
             return lightCloud;
         case "light rain":
             return lightRain;
