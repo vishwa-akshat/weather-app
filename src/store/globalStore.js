@@ -19,7 +19,7 @@ const useGlobalStore = create(
         searchLocation: async (value) => {
             const apiKey = import.meta.env.VITE_API_KEY;
             const response = await axios.get(
-                `http://api.openweathermap.org/geo/1.0/direct?q=${value}&limit=5&appid=${apiKey}`
+                `https://api.openweathermap.org/geo/1.0/direct?q=${value}&limit=5&appid=${apiKey}`
             );
             set({ searchedLocationData: response.data });
         },
