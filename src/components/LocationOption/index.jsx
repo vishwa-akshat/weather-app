@@ -6,7 +6,6 @@ import chevron from "assets/chevron_right.svg";
 import "./style.scss";
 
 export default function LocationOption({ locationData }) {
-    console.log(locationData);
     return (
         <div className="location-option-wrapper">
             <span className="location-name">{locationData.name}</span>

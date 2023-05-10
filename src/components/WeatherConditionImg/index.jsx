@@ -1,11 +1,12 @@
-// import React from 'react';
+import PropTypes from "prop-types";
 
 import cloudBackground from "assets/Cloud-background.png";
-import shower from "assets/Shower.png";
+
+import { getWeatherImage } from "../../utils/getWeatherImage";
 
 import "./style.scss";
 
-export default function WeatherConditionImg() {
+export default function WeatherConditionImg({ weatherCondition }) {
     return (
         <div className="weather-condition-wrapper">
             <img
@@ -13,7 +14,15 @@ export default function WeatherConditionImg() {
                 src={cloudBackground}
                 alt="cloud"
             />
-            <img className="weather-condition-img" src={shower} alt="shower" />
+            <img
+                className="weather-condition-img"
+                src={getWeatherImage(weatherCondition)}
+                alt="shower"
+            />
         </div>
     );
 }
+
+WeatherConditionImg.propTypes = {
+    weatherCondition: PropTypes.string,
+};

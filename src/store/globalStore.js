@@ -9,6 +9,7 @@ const useGlobalStore = create((set, get) => ({
     weatherData: [],
     currentCity: null,
     unit: "imperial",
+    isLoading: false,
     setUnit: (value) => set({ unit: value }),
     setLat: (value) => set({ lat: value }),
     setLong: (value) => set({ long: value }),
@@ -19,10 +20,9 @@ const useGlobalStore = create((set, get) => ({
             `http://api.openweathermap.org/geo/1.0/direct?q=${value}&limit=5&appid=${apiKey}`
         );
         set({ searchedLocationData: response.data });
-        console.log(navigator);
     },
     weatherApiCall: async () => {
-        set({ weatherData: [] });
+        set({ isLoading: true });
         const lat = get().lat;
         const long = get().long;
         const unit = get().unit;
@@ -44,7 +44,14 @@ const useGlobalStore = create((set, get) => ({
                 }));
             }
             set({ currentCity: response.data.city.name });
+            set({ isLoading: false });
         }
+        const removeDuplicate = get()?.weatherData.filter(
+            (item) =>
+                get().weatherData.indexOf(item.dt) ===
+                get().weatherData.lastIndexOf(item.dt)
+        );
+        console.log(removeDuplicate);
     },
     setCurrentLocation: () => {
         navigator.geolocation.getCurrentPosition(function (position) {

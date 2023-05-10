@@ -8,18 +8,9 @@ import useGlobalStore from "../../store/globalStore";
 import "./style.scss";
 
 export default function Home() {
-    const { unit, setCurrentLocation, weatherApiCall } = useGlobalStore(
-        (state) => state
-    );
-
-    useEffect(() => {
-        setCurrentLocation();
-        setTimeout(() => weatherApiCall(), 1000);
-    }, []);
-
-    useEffect(() => {
-        weatherApiCall();
-    }, [unit]);
+    // useEffect(() => {
+    //     weatherApiCall();
+    // }, [unit]);
 
     return (
         <div className="container">

@@ -19,7 +19,9 @@ export default function LeftPanel() {
     return (
         <div className="left-panel">
             <LeftPanelHeader />
-            <WeatherConditionImg />
+            <WeatherConditionImg
+                weatherCondition={weatherData?.weather[0]?.description}
+            />
             <div className="temperature-wrapper">
                 {weatherData?.main?.temp?.toFixed(0)}
                 <span className="temperature-type">
